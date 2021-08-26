@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CourseDao extends CrudRepository<Course, Integer> {
     Course findById(int id);
+    Course findByName(String s);
 }

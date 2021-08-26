@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface InstructorDao<T extends Instructor> extends CrudRepository<T, Integer> {
+    Instructor findById(int id);
+    Instructor findByFullName(String s);
 }
