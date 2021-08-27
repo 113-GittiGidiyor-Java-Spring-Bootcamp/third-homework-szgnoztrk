@@ -15,9 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "permanent_instructor")
+@Table(name = "permanent_instructors")
 public class PermanentInstructor extends Instructor{
-    @Column(name = "vr_fixed_salary")
+    @Column(name = "fixed_salary")
     private double fixedSalary;
 
     @Builder(builderMethodName = "PermanentInstructorBuilder")

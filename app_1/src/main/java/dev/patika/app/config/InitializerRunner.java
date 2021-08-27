@@ -15,12 +15,13 @@ import java.util.List;
 
 @Component
 public class InitializerRunner implements CommandLineRunner {
+    //Field Injection
     @Autowired
     private CourseDao courseDao;
-
+    //Field Injection
     @Autowired
     private InstructorDao instructorDao;
-
+    //Field Injection
     @Autowired
     private StudentDao studentDao;
 
@@ -54,6 +55,9 @@ public class InitializerRunner implements CommandLineRunner {
                         .phoneNumber("+905554443322")
                         .hourlySalary(200.0).build())).build());
 
+        /*
+            İlk önce her ekleyeceğim öğrenci için course listesi oluşturarak bu listeleri save işleminde kullandım.
+         */
         List<Course> student1Course = new ArrayList<>();
         student1Course.add(this.courseDao.findById(1));
         student1Course.add(this.courseDao.findById(3));

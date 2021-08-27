@@ -1,4 +1,4 @@
-package dev.patika.app.services.abstracts;
+package dev.patika.app.service.abstracts;
 import java.util.List;
 
 public interface BaseService<T> {

@@ -1,8 +1,9 @@
-package dev.patika.app.services.concretes;
+package dev.patika.app.service.concretes;
 
 import dev.patika.app.dao.StudentDao;
 import dev.patika.app.model.Student;
-import dev.patika.app.services.abstracts.BaseService;
+import dev.patika.app.model.dto.GenderGroupDto;
+import dev.patika.app.service.abstracts.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,9 @@ public class StudentService implements BaseService<Student> {
         Student student = this.studentDao.findByFullName(s);
         this.studentDao.delete(student);
         return "Deleted.";
+    }
+
+    public List<GenderGroupDto> genderWithGroup(){
+        return this.studentDao.getGendersWithGroup();
     }
 }

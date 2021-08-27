@@ -1,8 +1,8 @@
-package dev.patika.app.services.concretes;
+package dev.patika.app.service.concretes;
 
 import dev.patika.app.dao.CourseDao;
 import dev.patika.app.model.Course;
-import dev.patika.app.services.abstracts.BaseService;
+import dev.patika.app.service.abstracts.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

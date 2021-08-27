@@ -1,13 +1,13 @@
-package dev.patika.app.services.concretes;
+package dev.patika.app.service.concretes;
 
 import dev.patika.app.dao.InstructorDao;
 import dev.patika.app.model.Instructor;
-import dev.patika.app.services.abstracts.BaseService;
+import dev.patika.app.model.dto.InstructorSalaryDto;
+import dev.patika.app.service.abstracts.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -51,5 +51,13 @@ public class InstructorService implements BaseService<Instructor> {
         Instructor instructor = this.instructorDao.findByFullName(s);
         this.instructorDao.delete(instructor);
         return "Deleted.";
+    }
+
+    public List<InstructorSalaryDto> getTop3MaxSalary(){
+        return this.instructorDao.getTop3MaxSalary();
+    }
+
+    public List<InstructorSalaryDto> getTop3MinSalary(){
+        return this.instructorDao.getTop3MinSalary();
     }
 }

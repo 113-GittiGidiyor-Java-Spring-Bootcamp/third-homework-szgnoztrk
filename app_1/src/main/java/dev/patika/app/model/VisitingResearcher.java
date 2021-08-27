@@ -17,7 +17,7 @@ import java.util.List;
 @Entity
 @Table(name = "visiting_researchers")
 public class VisitingResearcher extends Instructor{
-    @Column(name = "vr_hourly_salary")
+    @Column(name = "hourly_salary")
     private double hourlySalary;
 
     @Builder(builderMethodName = "VisitingResearcherBuilder")
